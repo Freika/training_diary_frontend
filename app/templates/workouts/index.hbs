@@ -2,6 +2,10 @@
 
 <ul>
   {{#each model as |workout|}}
-    <li>{{workout.id}}</li>
+    <li>
+      {{#link-to 'workouts.show' workout}}
+        {{workout.id}}
+      {{/link-to}}
+    </li>
   {{/each}}
 </ul>

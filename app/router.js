@@ -7,7 +7,11 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('workouts', function() {
+    this.route('new');
 
+    this.route('show', {
+      path: ':workout_id'
+    });
   });
 });
 
