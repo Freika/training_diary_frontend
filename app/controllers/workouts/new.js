@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default Ember.Controller.extend({
   isValid: Ember.computed(
     'model.trained_at',
@@ -15,7 +17,7 @@ export default Ember.Controller.extend({
     save() {
       if (this.get('isValid')) {
         this.get('model').save().then((workout) => {
-          this.transitionToRoute('workout.show', workout);
+          this.transitionToRoute('workouts.show', workout);
         });
       } else {
         this.set('errorMessage', 'You have to fill all the fields.');

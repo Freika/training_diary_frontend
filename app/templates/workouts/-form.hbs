@@ -2,7 +2,7 @@
   <h2>{{errorMessage}}</h2>
   <div class="form-group">
     <label for="trained_at">Training date</label>
-    {{input value=model.trained_at class='form-control'}}
+    {{bootstrap-datepicker value=model.trained_at class='form-control' format="dd.mm.yy" todayBtn=true weekStart=1 linked=true}}
   </div>
   <div class="form-group">
     <label for="day">Training day</label>
@@ -10,7 +10,7 @@
   </div>
   <div class="form-group">
     <label for="description">Description</label>
-    {{input value=model.description class='form-control'}}
+    {{textarea value=model.description class='form-control'}}
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
