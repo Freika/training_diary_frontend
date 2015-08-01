@@ -1,5 +1,5 @@
 <ul>
-  <li>{{model.trainedAt}}</li>
-  <li>{{model.day}}</li>
-  <li>{{model.description}}</li>
+  <li>Training date: {{formatted-date model.trainedAt 'LL'}}</li>
+  <li>Training <b>day</b>: {{model.day}}</li>
+  <li>Something special about this training: {{model.description}}</li>
 </ul>
