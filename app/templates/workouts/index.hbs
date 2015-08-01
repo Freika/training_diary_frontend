@@ -6,7 +6,7 @@
   {{#each model as |workout|}}
     <li>
       {{#link-to 'workouts.show' workout}}
-        {{workout.trainedAt}}
+        {{formatted-date workout.trainedAt 'LL'}}
       {{/link-to}}
     </li>
   {{/each}}
