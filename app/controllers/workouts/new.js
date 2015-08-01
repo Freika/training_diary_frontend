@@ -2,12 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   isValid: Ember.computed(
-    'model.trained_at',
+    'model.trainedAt',
     'model.day',
     'model.description',
     {
       get() {
-        return !Ember.isEmpty(this.get('model.trained_at')) &&
+        return !Ember.isEmpty(this.get('model.trainedAt')) &&
                !Ember.isEmpty(this.get('model.day')) &&
                !Ember.isEmpty(this.get('model.description'));
       }
