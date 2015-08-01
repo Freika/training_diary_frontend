@@ -8,6 +8,7 @@
       {{#link-to 'workouts.show' workout}}
         {{formatted-date workout.trainedAt 'LL'}}
       {{/link-to}}
+      <a href="#" {{action 'delete' workout}}>Delete</a>
     </li>
   {{/each}}
 </ul>
