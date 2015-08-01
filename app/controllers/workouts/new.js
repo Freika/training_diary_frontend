@@ -1,33 +1,9 @@
-import Ember from 'ember';
+import WorkoutsBaseController from './base';
 
-export default Ember.Controller.extend({
-  isValid: Ember.computed(
-    'model.trainedAt',
-    'model.day',
-    'model.description',
-    {
-      get() {
-        return !Ember.isEmpty(this.get('model.trainedAt')) &&
-               !Ember.isEmpty(this.get('model.day')) &&
-               !Ember.isEmpty(this.get('model.description'));
-      }
-    }
-  ),
+export default WorkoutsBaseController.extend({
   actions: {
-    save() {
-      if (this.get('isValid')) {
-        this.get('model').save().then((workout) => {
-          this.transitionToRoute('workouts.show', workout);
-        });
-      } else {
-        this.set('errorMessage', 'You have to fill all the fields.');
-      }
-
-      return false;
-    },
     cancel () {
       this.transitionToRoute('workouts');
-
       return false;
     }
   }

@@ -12,6 +12,11 @@ Router.map(function() {
     this.route('show', {
       path: ':workout_id'
     });
+
+    this.route('edit', {
+      path: ':workout_id/edit'
+    });
+
   });
 });
 
